@@ -1,0 +1,42 @@
+services:
+  application:
+    build:
+      context: .
+    image: imirsaburov/demo-project:2
+    container_name: demo-project
+    hostname: demo-project
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - 8080:8080
+    environment:
+      DB_HOST: postgres-demo-project
+      DB_PORT: 5432
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: postgres
+
+    networks:
+      - network
+
+  postgres:
+    image: postgres:16.1
+    container_name: postgres-demo-project
+    hostname: postgres-demo-project
+    volumes:
+      - './data/postgres:/var/lib/postgresql/data'
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    restart: always
+    ports:
+      - 5433:5432
+    networks:
+      - network
+
+networks:
+  network:
+    name: "demo-project"
+    driver: 'bridge'

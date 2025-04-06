@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "797b352e-8d0c-42e6-925f-7d6237c513f8",
+		"name": "demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10018469"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/user/pageable?page=0&size=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"pageable"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/user/pageable?page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"pageable"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Apr 2025 12:09:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"firstname\": \"Obdulia\",\n            \"lastname\": \"Wolf\",\n            \"balance\": 56948737\n        },\n        {\n            \"id\": 2,\n            \"firstname\": \"Pearl\",\n            \"lastname\": \"Ward\",\n            \"balance\": 51808862\n        },\n        {\n            \"id\": 3,\n            \"firstname\": \"Janina\",\n            \"lastname\": \"Rogahn\",\n            \"balance\": 51134666\n        },\n        {\n            \"id\": 5,\n            \"firstname\": \"Patrick\",\n            \"lastname\": \"Hamill\",\n            \"balance\": 51802820\n        },\n        {\n            \"id\": 6,\n            \"firstname\": \"Shanda\",\n            \"lastname\": \"Hodkiewicz\",\n            \"balance\": 54501540\n        },\n        {\n            \"id\": 7,\n            \"firstname\": \"Alba\",\n            \"lastname\": \"Cummings\",\n            \"balance\": 51962766\n        },\n        {\n            \"id\": 8,\n            \"firstname\": \"Bettye\",\n            \"lastname\": \"Trantow\",\n            \"balance\": 46760804\n        },\n        {\n            \"id\": 9,\n            \"firstname\": \"Lajuana\",\n            \"lastname\": \"Funk\",\n            \"balance\": 48163673\n        },\n        {\n            \"id\": 10,\n            \"firstname\": \"Stephan\",\n            \"lastname\": \"Bahringer\",\n            \"balance\": 48617786\n        },\n        {\n            \"id\": 11,\n            \"firstname\": \"Shira\",\n            \"lastname\": \"Murphy\",\n            \"balance\": 52084026\n        }\n    ],\n    \"page\": {\n        \"size\": 10,\n        \"number\": 0,\n        \"totalElements\": 15,\n        \"totalPages\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"{{$randomFirstName}}\",\r\n    \"lastname\": \"{{$randomLastName}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstname\": \"{{$randomFirstName}}\",\r\n    \"lastname\": \"{{$randomLastName}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Apr 2025 12:09:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 16,\n    \"firstname\": \"Darian\",\n    \"lastname\": \"Farrell\",\n    \"balance\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "edit user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"{{$randomFirstName}}\",\r\n    \"lastname\": \"{{$randomLastName}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/user/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstname\": \"{{$randomFirstName}}\",\r\n    \"lastname\": \"{{$randomLastName}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Apr 2025 12:09:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"firstname\": \"Norene\",\n    \"lastname\": \"Lebsack\",\n    \"balance\": 56948737\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "get transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/transaction/pageable?page=0&size=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"transaction",
+								"pageable"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "userId",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "2025-03-05",
+									"disabled": true
+								},
+								{
+									"key": "to",
+									"value": "2025-03-07",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/transaction/pageable?page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"pageable"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "userId",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "from",
+											"value": "2025-03-05",
+											"disabled": true
+										},
+										{
+											"key": "to",
+											"value": "2025-03-07",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Apr 2025 12:08:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"amount\": 100000000,\n            \"userId\": 1,\n            \"type\": \"CREDIT\",\n            \"time\": \"2025-01-01T01:01:01\"\n        },\n        {\n            \"id\": 2,\n            \"amount\": 574666,\n            \"userId\": 1,\n            \"type\": \"DEBIT\",\n            \"time\": \"2025-01-19T05:12:15\"\n        },\n        {\n            \"id\": 3,\n            \"amount\": 939373,\n            \"userId\": 1,\n            \"type\": \"DEBIT\",\n            \"time\": \"2025-02-01T21:16:04\"\n        },\n        {\n            \"id\": 4,\n            \"amount\": 84976,\n            \"userId\": 1,\n            \"type\": \"DEBIT\",\n            \"time\": \"2025-03-02T08:43:29\"\n        },\n        {\n            \"id\": 5,\n            \"amount\": 881918,\n            \"userId\": 1,\n            \"type\": \"DEBIT\",\n            \"time\": \"2025-02-19T00:50:29\"\n        },\n        {\n            \"id\": 6,\n            \"amount\": 972343,\n            \"userId\": 1,\n            \"type\": \"DEBIT\",\n            \"time\": \"2025-01-22T23:00:24\"\n        },\n        {\n            \"id\": 7,\n            \"amount\": 481256,\n            \"userId\": 1,\n            \"type\": \"DEBIT\",\n            \"time\": \"2025-02-25T19:27:58\"\n        },\n        {\n            \"id\": 8,\n            \"amount\": 772590,\n            \"userId\": 1,\n            \"type\": \"DEBIT\",\n            \"time\": \"2025-03-09T21:15:45\"\n        },\n        {\n            \"id\": 9,\n            \"amount\": 592139,\n            \"userId\": 1,\n            \"type\": \"DEBIT\",\n            \"time\": \"2025-02-20T22:52:11\"\n        },\n        {\n            \"id\": 10,\n            \"amount\": 915536,\n            \"userId\": 1,\n            \"type\": \"DEBIT\",\n            \"time\": \"2025-03-23T05:19:00\"\n        }\n    ],\n    \"page\": {\n        \"size\": 10,\n        \"number\": 0,\n        \"totalElements\": 1515,\n        \"totalPages\": 152\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 4,\r\n    \"type\" : \"DEBIT\",\r\n    \"amount\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/transaction",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"transaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 4,\r\n    \"type\" : \"DEBIT\",\r\n    \"amount\": 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/transaction",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"transaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Apr 2025 12:09:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1516,\n    \"amount\": 1000,\n    \"userId\": 4,\n    \"type\": \"DEBIT\",\n    \"time\": \"2025-04-06T17:09:05.717793922\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
