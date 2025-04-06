@@ -1,6 +1,6 @@
 Instruction to launching the project
 
-If you want to use you own db, you need configure environment variables
+If you want to use your own db, you need configure environment variables
 
 `DB_HOST`
 `DB_PORT`
